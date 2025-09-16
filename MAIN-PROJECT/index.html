@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="icon" type="image/x-icon" href="./assets/images/js.jpeg">
+   <style>
+        body {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            position: relative;
+        }
+        .container {
+            width: 1512px;
+        }
+        /* nav */
+        nav {
+            padding: 10px 20px;
+            position: relative;
+        }
+        .nav-logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        .nav-links a:hover{
+            color: rgb(119, 225, 232);
+        }
+        .nav-links li {
+            margin-left: 50px;
+            margin-top: -15px;
+        }
+        #menu-toggle {
+            display: none;
+        }
+        .menu-icon {
+            display: none;
+            font-size: 26px;
+            color: white;
+            cursor: pointer;
+        }
+        nav ul li a:hover {
+            color: rgb(119, 225, 232);
+            height: 50px;
+            width: 200px;
+            border-radius: 5px;
+            padding: 10px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .contact-me i {
+            font-size: 25px;
+            margin-right: 10px;
+        }
+        .header {
+            display: flex;
+            background-image: linear-gradient(black 70%, rgb(119, 225, 232));
+            margin-top: 10px;
+            position: sticky;
+            top: 0;
+            padding: 5px;
+            z-index: 1;
+        }
+        .header label {
+            visibility: hiden;
+        }
+        .header input {
+            color: white;
+            visibility: hiden;
+        }
+        .header-content ul {
+            display: flex;
+            margin-left: 800px;
+        }
+        .header-content h2 {
+            color: white;
+            margin-left: 50px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        /* home page */
+        .home-body {
+            margin-left: 100px;
+            margin-top: 100px;
+        }
+        .future-content h1 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: white;
+            font-size: 50px;
+        }
+        .role h3 {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: white;
+            opacity: 0.9;
+            margin-top: 30px;
+        }
+        .resume-h {
+            opacity: 0.7;
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 15px;
+            margin-left: 35px;
+        }
+        .description p {
+            line-height: 24px;
+            color: white;
+            opacity: 0.7;
+            line-height: 30px;
+            margin-top: 50px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        /* buttons */
+        .buttons {
+            margin-top: 50px;
+        }
+        .view-profile:hover {
+            transform: scale(1.2);
+            background-color: rgb(119, 225, 232);
+            color: black;
+        }
+        .buttons a {
+            height: 40px;
+            text-decoration: none;
+            color: black;
+        }
+        .buttons a:hover {
+            color: black;
+        }
+        .view-profile {
+            margin-top: 30px;
+            margin-left: -200px;
+            border-radius: 10px;
+            transition: width 2s;
+            height: 40px;
+            width: 160px;
+            cursor: pointer;
+            background-color: black;
+            color: rgb(119, 225, 232);
+            box-shadow: 1px 1px 2px 2px rgb(119, 225, 232);
+        }
+        .view-profile a {
+            color: rgb(119, 225, 232);
+            font-weight: 800;
+        }
+        .contact-me {
+            margin-left: 30px;
+            border-radius: 10px;
+            height: 40px;
+            width: 160px;
+            cursor: pointer;
+            background-color: black;
+            color: rgb(119, 225, 232);
+            box-shadow: 1px 1px 2px 2px rgb(119, 225, 232);
+        }
+        .contact-me:hover {
+            transform: scale(1.2);
+            background-color: rgb(119, 225, 232);
+            color: rgb(8, 8, 8);
+        }
+        .contact-me a {
+            color: rgb(119, 225, 232);
+            font-weight: 800;
+        }
+        .horiz {
+            transform: rotate(90deg);
+            height: 2px;
+            background-color: rgb(119, 225, 232);
+            width: 298px;
+            border-radius: 10px;
+            margin-top: 169px;
+            position: absolute;
+            border: none;
+            margin-left: -130px;
+        }
+        .buttons img {
+            margin-left: 900px;
+            margin-top: -350px;
+            box-shadow: 5px 3px 7px 7px rgb(119, 225, 232);
+            height: 350px;
+            border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+        }
+        .buttons {
+            margin-left: 40px;
+        }
+        .img-container {
+            display: flex;
+        }
+        .img-container img {
+            position: absolut;
+            animation: myfirst 8s linear infinite alternate;
+            margin-left: 150px;
+            margin-top: -300px;
+        }
+        @keyframes myfirst {
+            0% {
+                left: 0px;
+                top: 50px;
+            }
+            25% {
+                left: 0px;
+                top: 20px;
+            }
+            50% {
+                left: 0px;
+                top: 20px;
+            }
+            75% {
+                left: 0px;
+                top: 20px;
+            }
+            100% {
+                left: 0px;
+                top: 50px;
+            }
+        }
+        .name h1 {
+            color: white;
+            text-align: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .name p {
+            color: white;
+            opacity: 0.9;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+        }
+        .socio-links {
+            color: white;
+            margin-left: 620px;
+        }
+        .socio-links a {
+            text-decoration: none;
+            color: white;
+        }
+        .socio-links i {
+            margin-left: 10px;
+            height: 30px;
+            width: 40px;
+            border-radius: 50%;
+            text-align: center;
+            padding: 5px;
+        }
+        .socio-links i:hover {
+            color: rgb(119, 225, 232);
+            transform: scale(1.6);
+        }
+        .blockquote {
+            color: white;
+            line-height: 25px;
+        }
+        h6 {
+            font-family: sans-serif;
+            color: white;
+            opacity: 0.5;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        .icon-with-name {
+            margin-top: 100px;
+            line-height: 70px;
+        }
+        /* about-me */
+        .about-me {
+            margin-top: 150px;
+            display: flex;
+            line-height: 50px;
+        }
+        .buttons {
+            color: white;
+            margin-left: 300px;
+        }
+        .buttons h1 {
+            font-size: 45px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .buttons h3 {
+            font-family: sans-serif;
+        }
+        .buttons p {
+            margin-bottom: 80px;
+            line-height: 30px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .skill-head {
+            color: white;
+            margin-left: 600px;
+            font-size: 45px;
+            margin-top: 70px;
+        }
+        .circle{
+            position: absolute;
+            margin-left: 8px;
+            margin-top: 2px;
+            font-size: 24px;
+        }
+        .read-more-btn {
+            margin-bottom: 100px;
+            margin-left: 30px;
+            border-radius: 10px;
+            height: 40px;
+            width: 160px;
+            cursor: pointer;
+            background-color: black;
+            color: rgb(119, 225, 232);
+            box-shadow: 1px 1px 2px 2px rgb(119, 225, 232);
+        }
+        .read-more-btn a {
+            color: rgb(119, 225, 232);
+            font-weight: 900;
+        }
+        .read-more-btn:hover {
+            transform: scale(1.2);
+            background-color: rgb(119, 225, 232);
+            color: black;
+        }
+        /* flipcard */
+        .flip-card {
+            background-color: transparent;
+            width: 280px;
+            height: 400px;
+            perspective: 2000px;
+            margin-top: 150px;
+            margin-left: 60px;
+            border-radius: 20px;
+            box-shadow: 4px 3px 3px 6px rgb(119, 225, 232);
+        }
+        .flip-card-inner {
+            position: relative;
+            width: 280px;
+            height: 400px;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            border-radius: 20px;
+        }
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+            border-radius: 20px;
+        }
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 280px;
+            height: 400px;
+            backface-visibility: hidden;
+        }
+        .flip-card-front {
+            background-color: black;
+            color: black;
+            border-radius: 20px;
+        }
+        .flip-card-back {
+            background-color: #ffb3ff;
+            color: rgb(20, 20, 20);
+            transform: rotateY(180deg);
+            border-radius: 20px;
+        }
+        .flip-card-back p {
+            font-size: 20px;
+        }
+        /* .flipcard-container */
+        .flipcard-container {
+            padding: 100px;
+            margin-left: -170px;
+            margin-top: -170px;
+            display: flex;
+            position: relative;
+        }
+        .flip-card-front img {
+            width: 280px;
+            height: 400px;
+            border-radius: 20px;
+        }
+        .view-profile i {
+            font-size: 25px;
+        }
+        /* resume */
+        .resume-content {
+            padding: 50px;
+        }
+        .resume {
+            text-align: center;
+            color: rgb(245, 248, 245);
+        }
+        .resume h1 {
+            font-size: 45px;
+        }
+        .data-horiz {
+            transform: rotate(90deg);
+            height: 2px;
+            background-color: rgb(119, 225, 232);
+            width: 440px;
+            border-radius: 10px;
+            margin-top: 237px;
+            position: absolute;
+            border: none;
+            margin-left: -208px;
+        }
+        .fa-bookmark i {
+            font-size: 10px;
+        }
+        .summary {
+            color: rgb(119, 225, 232);
+            margin-left: 100px;
+            font-weight: 900;
+            margin-top: 120px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .education {
+            margin-top: 60px;
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-left: 120px;
+            line-height: 30px;
+        }
+        .education h1 {
+            color: rgb(119, 225, 232);
+            margin-left: -8px;
+        }
+        .education p {
+            margin-left: 30px;
+        }
+        .education-line {
+            transform: rotate(90deg);
+            height: 2px;
+            background-color: rgb(119, 225, 232);
+            width: 220px;
+            border-radius: 10px;
+            margin-top: 128px;
+            position: absolute;
+            border: none;
+            margin-left: -100px;
+        }
+        #circle {
+            font-size: 24px;
+            margin-left: 25px;
+            margin-top: 1px;
+            position: absolute;
+        }
+        .resume-body {
+            display: flex;
+        }
+        .Experience {
+            margin-top: 110px;
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-left: 120px;
+            line-height: 40px;
+        }
+        .Experience h1 {
+            color: rgb(119, 225, 232);
+        }
+        .message-input {
+            padding: 100px;
+            width: 420px;
+        }
+        .Experience p {
+            margin-left: 40px;
+        }
+        /* contact-content */
+        .contact {
+            display: flex;
+        }
+        .contact-content {
+            color: white;
+            margin-top: 150px;
+            margin-left: 150px;
+        }
+        .contact-content input {
+            width: 500px;
+            padding: 8px;
+            border-radius: 5px;
+            box-shadow: 1px 1px 2px 2px rgb(119, 225, 232);
+            background-color: black;
+        }
+        .contact-content label {
+            font-size: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .contact-content button {
+            width: 520px;
+            height: 36px;
+            color: rgb(243, 250, 243);
+            font-size: 15px;
+            font-weight: 900;
+            border-radius: 5px;
+            border: none;
+            background-color: black;
+            box-shadow: 1px 1px 2px 2px rgb(119, 225, 232);
+        }
+        .contact-content button:hover {
+            color: black;
+            background-color: rgb(119, 225, 232);
+        }
+        @media screen and (max-width: 768px) {
+            .resp-contact-head {
+                font-size: 50px;
+                text-align: center;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+            /* nav */
+            .nav-links {
+                flex-direction: column;
+                gap: 70px;
+                text-align: center;
+                padding: 50px;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                visibility: hidden;
+                background-color: rgb(30, 198, 228);
+                box-shadow: 4px 5px 7px 8px rgb(30, 198, 228);
+                border-radius: 10px;
+                margin-top: 90px;
+            }
+            .nav-links a {
+                font-size: 40px;
+                color: black;
+            }
+            .nav-links li {
+                display: none;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+            #menu-toggle:checked+.menu-icon+.nav-links li {
+                display: flex;
+                visibility: visible;
+            }
+            #menu-toggle:checked+.menu-icon+.nav-links {
+                display: flex;
+                visibility: visible;
+            }
+            .menu-icon {
+                display: block;
+                margin-left: 1150px;
+                font-size: 40px;
+                padding-bottom: 5px;
+            }
+            /* resp-resume-head */
+            .resp-resume-head {
+                font-size: 80px;
+            }
+            .resp-container {
+                width: 1500px;
+            }
+            .resp-header {
+                width: 100%;
+            }
+            /* content */
+            .resp-buttonss img {
+                margin-top: 850px;
+                margin-left: 515px;
+                height: 600px;
+                width: 600px;
+                position: absolute;
+            }
+            .resp-contact-me {
+                height: 80px;
+                width: 500px;
+                font-size: 40px;
+            }
+            .resp-home-body {
+                text-align: center;
+            }
+            .resp-Experience {
+                margin-top: 1780px;
+                margin-left: -1140px;
+            }
+            .resp-future-content h1 {
+                font-size: 115px;
+            }
+            .resp-view-profile i {
+                font-size: 50px;
+            }
+            .resp-description p {
+                font-size: 25px;
+            }
+            .resp-role h3 {
+                font-size: 55px;
+            }
+            .resp-view-profile {
+                margin-top: 800px;
+                height: 80px;
+                width: 500px;
+                margin-left: -300px;
+                font-size: 40px;
+                margin-right: 50px;
+            }
+            /* resp-blockquote */
+            .resp-blockquote {
+                font-size: 30px;
+                line-height: 60px;
+                margin-left: 60px;
+            }
+            .resp-img-container {
+                display: inline-block;
+            }
+            /* resp-about-me */
+            .resp-about-me {
+                display: inline-block;
+            }
+            .resp-read-more-btn {
+                margin-top: 500px;
+                width: 300px;
+                height: 50px;
+                font-size: 25px;
+            }
+            .resp-contact-me i {
+                font-size: 50px;
+            }
+            /* res-buttons */
+            .res-buttons img {
+                position: absolute;
+                margin-top: -50px;
+                margin-left: 150px;
+                height: 600px;
+                width: 600px;
+            }
+            .resp-blockquotee {
+                font-size: 30px;
+                padding-left: 30px;
+                line-height: 70px;
+            }
+            .res-buttons {
+                margin-left: -55px;
+                margin-top: -500px;
+            }
+            .res-buttons h1 {
+                font-size: 115px;
+            }
+            .res-buttons h3 {
+                font-size: 45px;
+            }
+            .res-buttons p {
+                font-size: 25px;
+            }
+            /* resp-skill-head */
+            .resp-skill-head {
+                margin-left: -150px;
+                font-size: 115px;
+            }
+            /* resp-flipcard-container*/
+            .resp-flipcard-container {
+                display: inline-block;
+                height: 500px;
+                width: 700px;
+            }
+            .resp-fa-bookmark {
+                font-size: 80px;
+            }
+            /* resp-flip-card-inner */
+            .resp-flip-card-inner {
+                height: 500px;
+                width: 700px;
+            }
+            .resp-flip-card-front,
+            .resp-flip-card-back {
+                height: 500px;
+                width: 700px;
+            }
+            .resp-flip-card-back {
+                margin-left: -422px;
+            }
+            .resp-flip-card-backs {
+                margin-left: -1px;
+                height: 500px;
+                width: 700px;
+            }
+            .resp-flip-card-front img {
+                height: 500px;
+                width: 700px;
+            }
+            .resp-flip-card {
+                height: 500px;
+                width: 700px;
+            }
+            /* resp-resume-content */
+            .resp-resume-content {
+                margin-top: 2100px;
+            }
+            /* resp-header-content */
+            .resp-header-content {
+                font-size: 20px;
+            }
+            .resp-blockquote-sub {
+                font-size: 30px;
+                text-align: center;
+            }
+            /* resp-resume */
+            .resp-resume h1 {
+                font-size: 120px;
+            }
+            .resp-resume p {
+                font-size: 30px;
+                line-height: 40px;
+            }
+            .resp-data-horiz {
+                width: 1000px;
+                margin-top: 520px;
+                margin-left: -487px;
+            }
+            .resp-resume-h {
+                font-size: 40px;
+                margin-left: 70px;
+                margin-top: 100px;
+            }
+            .resp-socio-links {
+                font-size: 90px;
+            }
+            .resp-blockquotes {
+                font-size: 27px;
+                line-height: 56px;
+                padding-left: 50px;
+            }
+            .resp-horiz {
+                width: 660px;
+                margin-top: 395px;
+                margin-left: -305px;
+            }
+            .resp-contact-content {
+                margin-left: 200px;
+            }
+            .resp-contact-contentt {
+                margin-top: 600px;
+                margin-left: -1000px;
+            }
+            .resp-contact-contentt label {
+                font-size: 35px;
+            }
+            .resp-contact-contentt input {
+                width: 800px;
+                height: 50px;
+            }
+            .resp-contact-contentt button {
+                width: 820px;
+                height: 60px;
+                margin-top: 30px;
+                font-size: 30px;
+            }
+            .resp-block{
+                font-size: 20px;
+            }
+            .resp-circle{
+                margin-top: 50px;
+                margin-left: 16px;
+                font-size: 23px;
+                position: absolute;
+            }
+            .resp-education {
+                margin-top: 100px;
+            }
+            .resp-education-line {
+                width: 470px;
+                margin-top: 254px;
+                margin-left: -224px;
+            }
+        }
+    </style>
+<body>
+    <div class="container resp-container">
+        <div class="header resp-header">
+            <div class=" header-content resp-header-content ">
+                <h2>PORT<span style="color: rgb(119, 225, 232)">FOLIO</span></h2>
+            </div>
+            <div class="header-content">
+                <nav>
+                    <div class="nav-container">
+                        <input type="checkbox" id="menu-toggle" />
+                        <label for="menu-toggle" class="menu-icon"><i class="fa fa-align-justify"></i></label>
+                        <ul class="nav-links">
+                            <li><a href="#about-me">About</a></li>
+                            <li><a href="#flipcard-container">Skill</a></li>
+                            <li><a href="#resume-content">Resume</a></li>
+                            <li><a href="#contact-info">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="home-body resp-home-body">
+            <div class="future-content resp-future-content">
+                <h1>CODE THE &nbsp;<span style="color: rgb(119, 225, 232) ;">FUTURE <br>WITH HEMA</span></h1>
+            </div>
+            <div class="role resp-role">
+                <h3>FRONTEND & BACKEND DEVELOPER</h3>
+            </div>
+            <div class="description resp-description">
+                <P>Passionate Full Stack Developer skilled in front-end (HTML, CSS, JavaScript, React) and back-end
+                    <br>(Node.js, Express, MongoDB) technologies. Experienced in building responsive, scalable web
+                    applications <br>with clean code and optimized performance. Committed to delivering innovative
+                    solutions,<br> enhancing user experiences, and collaborating effectively to meet project goals.
+                </P>
+            </div>
+            <div class="img-container resp-img-container">
+                <div class="buttons resp-buttons">
+                    <button class="view-profile resp-view-profile"> <i class="fa fa-arrow-down"
+                            style="font-size:24px"></i><a href="./resume/HS Jobstreet Resume(1).docx">
+                            Download CV</a></button  Download>
+                    <button class="contact-me resp-contact-me"><i class="fa fa-paper-plane-o"></i><a
+                            href="#contact-info">Contact
+                            Me</a></button>
+                </div>
+                <div class="buttons resp-buttonss">
+                    <img src="./assets/images/hema.png">
+                </div>
+            </div>
+            <!-- about me -->
+            <div class=" about-me resp-about-me" id="about-me">
+                <div class="buttons res-buttons" style="margin-top: 490px;margin-left: -800px;">
+                    <img src="./assets/images/hema.png">
+                </div>
+                <div class="buttons res-buttons">
+                    <h1>About <span style="color: rgb(119, 225, 232) ;">Me</span></h1>
+                    <h3>Full Stack Developer</h3>
+                    <p style="color: white;">I am a dedicated Python Full Stack Developer with expertise in designing
+                        and developing dynamic,
+                        scalable, and secure web applications. My skill set spans backend development with Python,
+                        Django,
+                        and Flask, and frontend technologies like HTML, CSS, JavaScript, and React. I have strong
+                        experience
+                        in API integration, database management, and deploying applications to cloud platforms.
+                        Passionate
+                        about writing clean, maintainable code and delivering solutions that enhance user experience and
+                        business efficiency</p>
+                    <button class="read-more-btn resp-read-more-btn"><a href="#resume-content">Read More</a></button>
+                </div>
+            </div>
+            <!-- skills -->
+            <h1 class="skill-head resp-skill-head">Skills</h1>
+            <div class="flipcard-container resp-flipcard-container" id="flipcard-container">
+                <div class="flip-card resp-flip-card">
+                    <div class="flip-card-inner resp-flip-card-inner">
+                        <div class="flip-card-front resp-flip-card-front">
+                            <img src="./assets/images/e042f07148da18dc8773fec5277da45c.jpg">
+                        </div>
+                        <div class="flip-card-back resp-flip-card-backs">
+                            <i class="fa fa-html5" style="font-size:48px;color:rgb(16, 16, 16);margin-top: 40px;"></i>
+                            <h1 style="font-family: Arial, Helvetica, sans-serif;color:rgb(15, 15, 15);">FRONTEND
+                                DEVELOPER</h1>
+                            <p><b style="justify-content: center;"> Proficient in HTML5,<br> semantic markup,<br>forms,<br>multimedia, <br>SEO tags,<br>accessibility,<br>responsive design,<br>HTML5 APIs.
+                                </b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- flip-two -->
+                <div class="flip-card resp-flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front resp-flip-card-front">
+                            <img src="./assets/images/two.jpg" alt="Avatars">
+                        </div>
+                        <div class="flip-card-back resp-flip-card-back">
+                            <i class="fa fa-html5" style="font-size:48px;color:rgb(16, 16, 16);margin-top: 40px;"></i>
+                            <h1 style="font-family: Arial, Helvetica, sans-serif;color: rgb(18, 19, 18);">BACKEND
+                                DEVELOPER</h1>
+                            <p><b style="justify-content: center;">Django,<br>REST APIs,<br>databases,<br>deployment,<br>cloud<br>services</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card resp-flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front resp-flip-card-front">
+                            <img src="./assets/images/cone.jpg">
+                        </div>
+                        <div class="flip-card-back resp-flip-card-back">
+                            <i class="fa fa-html5" style="font-size:48px;color:rgb(16, 16, 16);margin-top: 40px;"></i>
+                            <h1 style="font-family: Arial, Helvetica, sans-serif;color: rgb(8, 8, 8);">C LANGUAGE</h1>
+                            <p>
+                            <b style="justify-content: center;"> pointers,<br>data structures,<br>algorithms,<br>problem-solving,<br>system-level programming</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card resp-flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front resp-flip-card-front">
+                            <img src="./assets/images/data science.jpg" alt="Avatars">
+                        </div>
+                        <div class="flip-card-back resp-flip-card-back">
+                            <i class="fa fa-html5" style="font-size:48px;color:rgb(16, 16, 16);margin-top: 40px;"></i>
+                            <h1 style="font-family: Arial, Helvetica, sans-serif;color: rgb(17, 18, 17);">TOOLS
+                            </h1>
+                            <p><b style="justify-content: center;"> SQL,<br>Git,<br>GitHub,<br>VS Code</b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- resume -->
+        <div class="resume-content resp-resume-content" id="resume-content">
+            <div class="resume resp-resume">
+                <h1>Resume</h1>
+                <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Passionate developer with strong
+                    problem-solving skills, eager to create
+                    efficient, scalable, and
+                    user-friendly applications.</p>
+            </div>
+            <div class="resume-body">
+                <div class="summary-content resp-summary-content">
+                    <div class="summary resp-summary">
+                        <h1 class="resume-head resp-resume-head">Summary</h1>
+                        <i class="fa fa-circle-o  circle resp-circle"></i>
+                        <hr class="horiz resp-horiz">
+                        <h2 class="resume-h resp-resume-h">HEMA SANKAR</h2><br>
+                        <blockquote class="blockquote resp-blockquote">Enthusiastic Python Full Stack Developer
+                            with
+                            skills in web<br> development, data science, and
+                            API
+                            integration. Experienced in<br> building scalable applications,managing databases, <br>and
+                            delivering
+                            user-focused solutions. Passionate about<br> problem-solving and continuous learning.</P>
+                            <p><i class="fa fa-circle" style="font-size:9px"></i>&nbsp;&nbsp;Trichy ,Tamil Nadu</p>
+                            <p><i class="fa fa-circle" style="font-size:9px"></i>&nbsp;&nbsp;8778492224</p>
+                            <a href="hemasankar728@gmail.com" style="text-decoration: none;color: white;">
+                                <i class="fa fa-circle"
+                                    style="font-size:9px"></i>&nbsp;&nbsp;hemasankar728@gmail.com</a>
+                        </blockquote>
+                    </div>
+                    <div class="education resp-education">
+                        <h1 class="resume-head resp-resume-head">Education</h1>
+                        <i class="fa fa-circle-o"
+                            style="font-size:24px;color: rgb(119, 225, 232);position: absolute;margin-left: 1px;margin-top: -1px;"></i>
+                        <hr class="education-line resp-education-line">
+                        <h2 class="resume-h resp-resume-h"> COMPUTER SCIENCE AND ENGINEERING</h2><br>
+                        <P class="blockquote resp-blockquotes"><b>2021-2025</b></P>
+                        <p class="blockquote resp-blockquotes"><b>Mahath Amma Institute Of Engineering And
+                                Technology,<br>Tamilnadu</b></p>
+                        <p class="blockquote resp-blockquotes"><i class="fa fa-circle"
+                                style="font-size:9px"></i>&nbsp;&nbsp;<b>Specialized in software
+                                development, data structures,<br> &nbsp;&nbsp;&nbsp;algorithms, and database
+                                management.</b></p>
+                    </div>
+                </div>
+                <div class="summary-content">
+                    <div class="Experience resp-Experience">
+                        <h1 class="resume-head resp-resume-head">Experience</h1>
+                        <i class="fa fa-circle-o"
+                            style="font-size:24px;color: rgb(119, 225, 232);position: absolute;margin-left: 1px;margin-top: -1px;"></i>
+                        <hr class="data-horiz resp-data-horiz">
+                        <h2 class="resume-h resp-resume-h"> DATA SCIENCE INTERN-FANTACY</h2><br>
+                        <P class="blockquote resp-blockquotee"><b>May 2024 – Jun 2024 (2 months)</b></P>
+                        <p class="blockquote resp-blockquotee"><i class="fa fa-circle"
+                                style="font-size:9px;line-height: 25px;"></i>&nbsp;&nbsp;<b>Assisted in
+                                collecting,
+                                cleaning, and preprocessing<br> datasets for analysis and machine
+                                learning tasks<br>
+                                <i class="fa fa-circle" style="font-size:9px"></i>&nbsp;&nbsp;Built and evaluated
+                                predictive
+                                models to generate insights<br> and improve decision-making processes.<br>
+                                <i class="fa fa-circle" style="font-size:9px"></i>&nbsp;&nbsp;Created visualizations
+                                using
+                                Python libraries <br>(Pandas, Matplotlib, Seaborn) to present findings clearly.<br>
+                                <i class="fa fa-circle" style="font-size:9px"></i>&nbsp;&nbsp;Collaborated with the team
+                                on real-world projects, gaining<br> hands-on experience in data handling and analytics.<br>
+                                <i class="fa fa-circle" style="font-size:9px"></i>&nbsp;&nbsp;Improved problem-solving,
+                                statistical analysis,<br> and reporting skills within an agile work environment.</b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- contact -->
+        <div class="contact" id="contact-info">
+            <div class="contact-content resp-contact-content">
+                <h1 class="contact-head resp-contact-head">GET
+                    IN TOUCH</h1>
+                <H3 class="blockquote resp-blockquote-sub">Reach Out Via Email or Phone</H3>
+                <p class="blockquote resp-blockquote">Questions,Comments or requests!Feel Free to reach out,we' love to
+                    hear from you.</p>
+            </div>
+            <div class="contact-content resp-contact-contentt">
+                <label for="f-name">First Name*</label><br><br>
+                <input type="text" id="f-name" value=""><br><br>
+                <label for="l-name">Last Name*</label><br><br>
+                <input type="text" id="l-name" value=""><br><br>
+                <label for="mail">Email*</label><br><br>
+                <input type="email" id="mail" value=""><br><br>
+                <label for="name">Subject*</label><br><br>
+                <input type="text" id="name" value=""><br><br>
+                <label for="text">Message*</label><br><br>
+                <input type="text" value="" class="message-input"><br><br>
+                <button><a href="#" style="text-decoration: none;color: rgb(246, 249, 246);">Submit</a></button>
+            </div>
+        </div>
+        <div class="icon-with-name">
+            <div class="name">
+                <h1>HEMA<span style="color:   rgb(119, 225, 232);">SANKAR</span></h1>
+                <p class="blockquote resp-blockquote">Creating digital experience that illuminate the future of web
+                    developent</p>
+            </div>
+            <div class="socio-links resp-socio-links">
+                <a href="https://github.com/dashboard"><i class="fa fa-github" style="font-size:24px"></i></a>
+                <a
+                    href="https://www.linkedin.com/in/hema-s-14259a288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
+                        class="fa fa-linkedin" style="font-size:24px"></i></a>
+                <a href="https://www.instagram.com/"> <i class="fa fa-instagram" style="font-size:24px"></i></a>
+                <a href="http://t.me/Hemas148"><i class="fa fa-twitter" style="font-size:24px"></i></a>
+            </div>
+            <h6 class="blockquote resp-block">@2025 Hema Portfolio.All rights reserved</h6>
+        </div>
+    </div>
+</body>
+
+</html>
